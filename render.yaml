@@ -7,9 +7,9 @@ services:
     startCommand: "python main.py"
     envVars:
       - key: TELEGRAM_BOT_TOKEN
-        value: TELEGRAM_BOT_TOKEN
+        value: ${TELEGRAM_BOT_TOKEN}
       - key: GROQ_API_KEY
-        value: GROQ_API_KEY
+        value:  ${GROQ_API_KEY}
     autoDeploy: true # Automatically deploy changes from GitHub repo
     branch: main # The branch to deploy from
 
