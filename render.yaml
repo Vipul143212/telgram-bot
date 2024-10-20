@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: documate-bot
+    env: python
+    plan: free # Use free tier; you can change to a paid tier if needed
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: YOUR_TELEGRAM_BOT_TOKEN_ENV_VARIABLE
+      - key: GROQ_API_KEY
+        value: YOUR_GROQ_API_KEY_ENV_VARIABLE
+    autoDeploy: true # Automatically deploy changes from GitHub repo
+    branch: main # The branch to deploy from
+
